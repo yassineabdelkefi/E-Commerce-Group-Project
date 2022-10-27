@@ -20,7 +20,7 @@ USE `ecommerce` ;
 CREATE TABLE IF NOT EXISTS `ecommerce`.`user` (
   `iduser` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NOT NULL,
-  `password` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`iduser`),
   UNIQUE INDEX `username_UNIQUE` (`username` ASC) VISIBLE,
