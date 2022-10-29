@@ -68,8 +68,8 @@ module.exports = {
         if (bResult) {
             console.log(bResult)
         const token = jwt.sign({iduser:result[0].iduser},'jsfgfjguwrg8783wgbjs849h2fu3cnsvh8wyr8fhwfvi2g225',{ expiresIn: '24h' });
-        res.status(200).cookie('thetoken',token,{httpOnly:true,maxAge:24*60*60*1000})
-        return res.status(200).send('login');
+        // res.status(200).cookie('thetoken',token,{httpOnly:true,maxAge:24*60*60*1000})
+        return res.status(200).send(token);
         }
         return res.status(401).send({
         msg: 'Username or password is incorrect!'
